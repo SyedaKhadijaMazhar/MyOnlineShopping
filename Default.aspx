@@ -160,7 +160,8 @@
 
 
          <!----Footer Contents open ---->
-        <footer>
+        <hr />
+        <footer class="footer-pos">
 
             <div class="container">
                 <p class="pull-right"><a href="#">Back to top</a></p>

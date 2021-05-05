@@ -85,7 +85,7 @@
 
              <label class="col-xs-11">Confirm Password:</label>
             <div class="col-xs-11">
-             <asp:TextBox ID="txtCPass" runat="server" Class="form-control" placeholder="Enter Your Confirm Passowrd"></asp:TextBox>
+             <asp:TextBox ID="txtCPass"  runat="server" Class="form-control" placeholder="Enter Your Confirm Passowrd"></asp:TextBox>
                 </div>
 
              <label class="col-xs-11">Your Full Name:</label>
@@ -100,11 +100,29 @@
 
              <label class="col-xs-11"></label>
             <div class="col-xs-11">
-                <asp:Button ID="txtsignup" Class="btn btn-success" runat="server" Text="SignUp" />
+                <asp:Button ID="txtsignup" Class="btn btn-success" runat="server" Text="SignUp" OnClick="txtsignup_Click" />
+                <asp:Label ID="lblMsg" runat="server" Text="Label"></asp:Label>
                 </div>
         </div>
        
          <!----Sign Up close ---->
+
+        
+         <!----Footer Contents open ---->
+        <hr />
+        <footer style="width:auto;  height:auto;   position:absolute;  top:600px;  bottom:0;   left:0;  right:0;  margin:auto;">
+
+            <div class="container">
+                <p class="pull-right"><a href="#">Back to top</a></p>
+                <p>&copy; 2021 Khadija &middot; <a href="Default.aspx">Home</a>&middot;<a href="#">About</a>&middot;<a href="#">Contact</a>&middot;<a href="#">Products</a></p>
+
+            </div>
+
+
+        </footer>
+
+
+         <!----Footer Contents close ---->
     </form>
 </body>
 </html>
