@@ -29,8 +29,10 @@ public partial class SignUp : System.Web.UI.Page
                 con.Close();
                 lblMsg.Text = "Successfully Registered";
                 lblMsg.ForeColor = System.Drawing.Color.Green;
-            }
+                Response.Redirect("~/SignIn.aspx");
 
+            }
+           // Response.Redirect("~/SignIn.aspx");
         }
         else
         {
@@ -60,7 +62,7 @@ public partial class SignUp : System.Web.UI.Page
         {
             Response.Write("<script>alert('Confirm password not valid')</script>");
             txtCPass.Focus();
-            txtUname.Focus();
+           
             return false;
 
         }
@@ -89,4 +91,6 @@ public partial class SignUp : System.Web.UI.Page
         txtUname.Text = string.Empty;
         txtEmail.Text = string.Empty;
     }
+
+    
 }

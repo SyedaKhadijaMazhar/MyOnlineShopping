@@ -54,7 +54,8 @@
                                      <li><a href="#">Denims</a></li>
                                  </ul>
                              </li>
-                            <li><a href="SignUp.aspx">Registration</a></li>
+                            <li><a href="SignUp.aspx">SignUp</a></li>
+                             <li><a href="SignIn.aspx">SignIn</a></li>
                         </ul>
 
 

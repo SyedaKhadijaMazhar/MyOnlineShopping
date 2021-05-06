@@ -12,6 +12,42 @@
      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+     <script type="text/javascript">  
+         $(document).ready(function () {
+             $('#show_password').hover(function show() {
+                 //Change the attribute to text  
+                 $('#txtPass ').attr('type', 'text');
+                 $('.icon').removeClass('fa fa-eye-slash').addClass('fa fa-eye');
+             },
+                 function () {
+                     //Change the attribute back to password  
+                     $('#txtPass').attr('type', 'password');
+                     $('.icon').removeClass('fa fa-eye').addClass('fa fa-eye-slash');
+                 });
+             //CheckBox Show Password  
+             $('#ShowPassword').click(function () {
+                 $('#Password').attr('type', $(this).is(':checked') ? 'text' : 'password');
+             });
+         });
+     </script>  
+     <script type="text/javascript">  
+         $(document).ready(function () {
+             $('#show_password').hover(function show() {
+                 //Change the attribute to text  
+                 $('#txtCPass ').attr('type', 'text');
+                 $('.icon').removeClass('fa fa-eye-slash').addClass('fa fa-eye');
+             },
+                 function () {
+                     //Change the attribute back to password  
+                     $('#txtCPass').attr('type', 'password');
+                     $('.icon').removeClass('fa fa-eye').addClass('fa fa-eye-slash');
+                 });
+             //CheckBox Show Password  
+             $('#ShowPassword').click(function () {
+                 $('#Password').attr('type', $(this).is(':checked') ? 'text' : 'password');
+             });
+         });
+     </script> 
 </head>
 <body>
     <form id="form1" runat="server">
@@ -33,7 +69,7 @@
                     </div>
                     <div class="navbar-collapse collapse">
                         <ul class="nav navbar-nav navbar-right">
-                            <li class="active"><a href="Default.aspx">Home</a></li>
+                            <li><a href="Default.aspx">Home</a></li>
                                 <li><a href="#">About</a></li>
                                 <li><a href="#">Contact</a></li>
                              <li><a href="#">Blog-</a></li>
@@ -54,7 +90,8 @@
                                      <li><a href="#">Denims</a></li>
                                  </ul>
                              </li>
-                            <li><a href="SignUp.aspx">Registration</a></li>
+                            <li class="active"><a href="SignUp.aspx">SignUp</a></li>
+                             <li><a href="SignIn.aspx">SignIn</a></li>
                         </ul>
 
 
@@ -80,12 +117,17 @@
 
              <label class="col-xs-11">Password:</label>
             <div class="col-xs-11">
-             <asp:TextBox ID="txtPass" runat="server" Class="form-control" placeholder="Enter Your Password"></asp:TextBox>
+             <asp:TextBox ID="txtPass" TextMode="Password" runat="server" Class="form-control" placeholder="Enter Your Password"></asp:TextBox>
+               
                 </div>
 
              <label class="col-xs-11">Confirm Password:</label>
             <div class="col-xs-11">
-             <asp:TextBox ID="txtCPass"  runat="server" Class="form-control" placeholder="Enter Your Confirm Passowrd"></asp:TextBox>
+             <asp:TextBox ID="txtCPass" TextMode="Password"  runat="server" Class="form-control" placeholder="Enter Your Confirm Passowrd"></asp:TextBox>
+                 <h6 />
+                <div class="input-group-append">  
+                            <button id="show_password" class="btn btn-primary btn-xs btn-success" type="button">Show Password</button>  
+                        </div>
                 </div>
 
              <label class="col-xs-11">Your Full Name:</label>
